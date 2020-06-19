@@ -1,0 +1,54 @@
+<%- include("../partials/header") %>
+<div class="container">
+	<table class="table table-striped">
+	  <thead class="thead-dark">
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col">Headings</th>
+		  <th scope="col">Details</th>
+		 
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <th scope="row">1</th>
+		  <td>Name</td>
+		  <td><%= user.name %></td>
+		</tr>
+		 <tr>
+		  <th scope="row">2</th>
+		  <td>Username</td>
+		  <td><%= user.username %></td>
+		</tr>
+		 <tr>
+		  <th scope="row">3</th>
+		  <td>Email</td>
+		  <td><%= user.email %></td>
+		</tr>
+		 <tr>
+		  <th scope="row">4</th>
+		  <td>Address</td>
+		  <td>
+			 <%= user.address.suite%>, <%= user.address.street%>, <%= user.address.city%>, pincode:<%= user.address.zipcode%>, coordinates: (<%= user.address.geo.lat%>,<%=user.address.geo.lng %>) 
+			 </td>
+		</tr>
+		 <tr>
+		  <th scope="row">5</th>
+		  <td>Contact Number</td>
+		  <td><%= user.phone %></td>
+		</tr>
+		<tr>
+		  <th scope="row">6</th>
+		  <td>Website</td>
+		  <td><%= user.website %></td>
+		</tr>
+		 <tr>
+		  <th scope="row">7</th>
+		  <td>Company</td>
+		  <td>
+			  <%= user.company.name %>, <strong>Catchphrase: </strong>"<%= user.company.catchPhrase%>", <strong>Business Standard : </strong>"<%=user.company.bs%>"
+			 </td>
+		</tr>
+	  </tbody>
+	</table>
+</div>

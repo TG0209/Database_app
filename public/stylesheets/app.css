@@ -1,0 +1,15 @@
+/* display buttons inline */
+.del {
+	display:inline;
+	margin:10px;
+}
+
+/* Button full width */
+#btn{
+	width:100%;
+}
+
+/* assigning google font to body */
+body{
+	font-family: 'Raleway', sans-serif;
+}

@@ -1,0 +1,43 @@
+<%- include("../partials/header") %>
+<div class="container">
+	<header class="jumbotron">
+		<div class="container">
+			<h1>Welcome to Database</h1>
+			<p>Contains entire informaton of users!!</p>
+			<a class="btn btn-primary " href="/users/new">Add New User</a>
+			<form class="del"  action="/users/dump?_method=DELETE" method="POST">
+					<button  class="btn btn-danger">Clear Database</button>											 
+			</form>
+		</div>
+
+	</header>
+	
+	<table class="table">
+  <thead  class="thead-dark">
+    <tr>
+	  <th scope="col">#</th>
+      <th scope="col">Name</th>
+	  <th scope="col">Details</th>
+	  <th scope="col">Remarks</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+	<% let i=1 %>
+	<% user.forEach(function(users){ %>
+    <tr>
+      <th scope="row"><%= i %></th>
+		<td><%= users.name %></td>
+		<td><a href="/users/<%= users._id %>" class="btn btn-primary" >More Info!!</a></td>
+		<td>
+			<form  action="/users/<%=users._id %>?_method=DELETE" method="POST">
+					<button class="btn btn-danger">Clear User</button>											 
+			</form>
+		</td>
+    </tr>
+  	<% i++; 
+	  }) %>
+  </tbody>
+</table>
+	
+<%- include("../partials/footer") %>

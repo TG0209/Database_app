@@ -1,0 +1,60 @@
+<%- include("../partials/header") %>
+<div class="container">
+	<h1 style="text-align:center" >Create a new User</h1>
+	<div class="row">
+		<div style="width: 30% ;margin : 30px auto;">
+			<form method="POST" action="/users">
+				<div class="form-group">
+					<input  class = "form-control" type="text" name="name" placeholder="name">
+				</div>
+				<div class="form-group">
+					<input  class = "form-control" type="text" name="username" placeholder="username">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="email" name="email" placeholder="email">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="street" placeholder="street">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="suite" placeholder="suite">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="city" placeholder="city">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="zipcode" placeholder="zipcode">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="lat" placeholder="latitude">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="lng" placeholder="longitude">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="phone" placeholder="contact number">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="website" placeholder="website">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="company" placeholder="company name">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="catchPhrase" placeholder="catchPhrase">
+				</div>
+				<div class="form-group">
+					<input class = "form-control"  type="text" name="bs" placeholder="bs">
+				</div>
+				<div class="form-group">
+					<button id="btn" class = "btn btn-primary btn-lg">Submit</button>
+				</div>
+			</form>
+
+		<a href="/users" class = "btn btn-success" >Back</a>
+			
+		</div>
+	</div>
+</div>
+
+<%- include("../partials/footer") %>
